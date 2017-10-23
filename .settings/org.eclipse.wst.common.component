@@ -3,7 +3,6 @@
     <wb-module deploy-name="ssh_tax">
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/config"/>
         <property name="context-root" value="/ssh_tax"/>
         <property name="java-output-path" value="/ssh_tax/WebRoot/WEB-INF/classes"/>
