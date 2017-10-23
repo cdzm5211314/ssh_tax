@@ -1,9 +1,9 @@
-package com.chen.tax.user.service;
+package com.chen.nsfw.user.service;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.chen.tax.user.entity.User;
+import com.chen.nsfw.user.entity.User;
 
 public interface UserService {
 	// 新增

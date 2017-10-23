@@ -14,13 +14,7 @@
     <constant name="struts.ui.theme" value="simple" />
 	
 	<!-- 包含用户管理的struts配置文件 -->
-	<include file="com/chen/tax/user/config/user-struts.xml"></include>
+	<include file="com/chen/nsfw/user/config/user-struts.xml"></include>
 	
-	
-<!--     <package name="default" namespace="/" extends="struts-default"> -->
-
-<!--    </package> -->
-
-
 
 </struts>

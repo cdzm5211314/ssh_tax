@@ -1,11 +1,11 @@
-package com.chen.tax.user.action;
+package com.chen.nsfw.user.action;
 
 import java.util.List;
 
 import javax.annotation.Resource;
 
-import com.chen.tax.user.entity.User;
-import com.chen.tax.user.service.UserService;
+import com.chen.nsfw.user.entity.User;
+import com.chen.nsfw.user.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserAction extends ActionSupport {
@@ -33,7 +33,7 @@ public class UserAction extends ActionSupport {
 		if (user != null) {
 			userService.save(user);
 		}
-		return listUI();
+		return "list";
 	}
 
 	// 跳转到编辑(修改)页面
@@ -49,7 +49,7 @@ public class UserAction extends ActionSupport {
 		if (user != null) {
 			userService.update(user);
 		}
-		return listUI();
+		return "list";
 	}
 
 	// 删除
@@ -57,13 +57,13 @@ public class UserAction extends ActionSupport {
 		if (user != null && user.getId() != null) {
 			userService.delete(user.getId());
 		}
-		return listUI();
+		return "list";
 	}
 
 	// 批量删除
 	public String deleteSelected() {
 
-		return listUI();
+		return "list";
 	}
 	
 	public List<User> getUserList() {

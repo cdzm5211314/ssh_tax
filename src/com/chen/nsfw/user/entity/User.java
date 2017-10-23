@@ -1,4 +1,4 @@
-package com.chen.tax.user.entity;
+package com.chen.nsfw.user.entity;
 
 import java.io.Serializable;
 import java.util.Date;

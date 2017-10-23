@@ -10,7 +10,7 @@
 
 	<!-- 引入外部sprign其他模块配置文件 -->
 	<!--     <import resource="classpath:com/chen/*/config/*-spring.xml"/> -->
-    <import resource="classpath:com/chen/tax/*/config/*-spring.xml"/>
+    <import resource="classpath:com/chen/nsfw/*/config/*-spring.xml"/>
 
 	<!-- 引入外部的配置文件 -->
 	<context:property-placeholder location="classpath:db.properties" />
@@ -51,7 +51,7 @@
 		<property name="mappingLocations">
 			<list>
 				<!-- 实体类通配的hbm文件 -->
-				<value>classpath:com/chen/tax/*/entity/*.hbm.xml</value>
+				<value>classpath:com/chen/nsfw/*/entity/*.hbm.xml</value>
 			</list>
 		</property>
 	</bean>

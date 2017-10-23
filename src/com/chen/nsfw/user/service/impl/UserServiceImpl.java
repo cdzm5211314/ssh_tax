@@ -1,4 +1,4 @@
-package com.chen.tax.user.service.impl;
+package com.chen.nsfw.user.service.impl;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,9 +7,9 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.chen.tax.user.dao.UserDao;
-import com.chen.tax.user.entity.User;
-import com.chen.tax.user.service.UserService;
+import com.chen.nsfw.user.dao.UserDao;
+import com.chen.nsfw.user.entity.User;
+import com.chen.nsfw.user.service.UserService;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {

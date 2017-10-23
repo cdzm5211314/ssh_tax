@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.chen.tax.user.entity.User" table="user">
+	<class name="com.chen.nsfw.user.entity.User" table="user">
 		<id name="id" type="java.lang.String">
 			<column name="id" length="32" />
 			<generator class="uuid.hex" />

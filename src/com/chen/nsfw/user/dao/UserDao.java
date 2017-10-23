@@ -1,7 +1,7 @@
-package com.chen.tax.user.dao;
+package com.chen.nsfw.user.dao;
 
 import com.chen.core.dao.BaseDao;
-import com.chen.tax.user.entity.User;
+import com.chen.nsfw.user.entity.User;
 
 public interface UserDao extends BaseDao<User> {
 
