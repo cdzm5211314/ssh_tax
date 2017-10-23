@@ -8,6 +8,10 @@
 	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
+	<!-- 引入外部sprign其他模块配置文件 -->
+	<!--     <import resource="classpath:com/chen/*/config/*-spring.xml"/> -->
+    <import resource="classpath:com/chen/tax/*/config/*-spring.xml"/>
+
 	<!-- 引入外部的配置文件 -->
 	<context:property-placeholder location="classpath:db.properties" />
 
@@ -46,13 +50,11 @@
 		</property>
 		<property name="mappingLocations">
 			<list>
-				<value>classpath:com/chen/tax/entity/*.hbm.xml</value>
+				<!-- 实体类通配的hbm文件 -->
+				<value>classpath:com/chen/tax/*/entity/*.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
-
-	<!-- spring的注解扫描 -->
-	<context:component-scan base-package="com.chen.tax" />
 
 	<!-- 事务管理 -->
 	<bean id="txManager"
@@ -76,5 +78,10 @@
     	<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation"/>
     </aop:config>
 	
+	<!-- 所有业务dao的parent -->
+	<!-- baseDao 与项目中的BaseDao类没有任何关系 -->
+    <bean id="baseDao" abstract="true">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
 
 </beans>
