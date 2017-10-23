@@ -16,7 +16,16 @@
       		document.forms[0].action = "${basePath}nsfw/user_addUI.action";
       		document.forms[0].submit();
       	}
-      	
+      	//编辑
+      	function doEdit(id){
+      		document.forms[0].action = "${basePath}nsfw/user_editUI.action?user.id="+id;
+      		document.forms[0].submit();
+      	}
+    	//删除
+      	function doDelete(id){
+      		document.forms[0].action = "${basePath}nsfw/user_delete.action?user.id="+id;
+      		document.forms[0].submit();
+      	}
       	
     </script>
 </head>
@@ -52,11 +61,9 @@
                             <td align="center">电子邮箱</td>
                             <td width="100" align="center">操作</td>
                         </tr>
-                        <s:iterator value="userList">
-                            <tr bgcolor="f8f8f8">
+                        <s:iterator value="userList" status="st">
+                            <tr <s:if test="st.odd">bgcolor="f8f8f8"</s:if> >
                                 <td align="center"><input type="checkbox" name="selectedRow" value="<s:property value='id'/>" /></td>
-                                
-                                
                                 <td align="center"><s:property value="name"/></td>
                                 <td align="center"><s:property value="account"/></td>
                                 <td align="center"><s:property value="dept"/></td>
