@@ -31,9 +31,9 @@
 		document.forms[0].action = "${basePath}nsfw/user_deleteSelected.action";
 		document.forms[0].submit();
 	}
-	//导出excel
+	//导出用户列表:excel
 	function doExportExcel(){
-		
+		window.open("${basePath}nsfw/user_exporExcel.action");
 	}
 	//导入excel
 	function doImportExcel(){

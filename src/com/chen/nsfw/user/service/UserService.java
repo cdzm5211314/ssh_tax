@@ -3,6 +3,8 @@ package com.chen.nsfw.user.service;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.servlet.ServletOutputStream;
+
 import com.chen.nsfw.user.entity.User;
 
 public interface UserService {
@@ -20,5 +22,8 @@ public interface UserService {
 
 	// 查找列表
 	public List<User> findObjects();
+	
+	//导出用户列表 
+	public void exportExcel(List<User> userList, ServletOutputStream outputStream);
 
 }
