@@ -16,5 +16,20 @@
 	<!-- 包含用户管理的struts配置文件 -->
 	<include file="com/chen/nsfw/user/config/user-struts.xml"></include>
 	
+	<!-- 配置全局返回结果及异常映射 -->
+	<package name="base-default" extends="struts-default">
+		<!-- 全局返回结果 -->
+		<global-results>
+			<result name="sysError">/WEB-INF/jsp/error.jsp</result>
+			<result name="input">/WEB-INF/jsp/error.jsp</result>
+		</global-results>
+		<!-- 全局异常映射 -->
+		<global-exception-mappings>
+			<exception-mapping result="sysError" exception="com.chen.core.SysException"></exception-mapping>
+			<exception-mapping result="input" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+		
+	</package>
+	
 
 </struts>
