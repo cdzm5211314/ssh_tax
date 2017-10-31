@@ -29,5 +29,8 @@ public interface UserService {
 	
 	//导入用户列表
 	public void importExcel(File userExcel, String userExcelFileName);
+	
+	//根据用户id和用户帐号查询用户
+	public List<User> findUserByAccountAndId(String id, String account);
 
 }

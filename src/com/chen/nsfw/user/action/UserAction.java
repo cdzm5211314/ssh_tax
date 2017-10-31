@@ -11,6 +11,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.struts2.ServletActionContext;
 
 import com.chen.nsfw.user.entity.User;
@@ -150,6 +151,31 @@ public class UserAction extends ActionSupport {
 			}
 		}
 		 return "list";
+	}
+	
+	//添加帐号时校验唯一性
+	public void verifyAccount(){
+		try {
+			//1,获取帐号
+			if (user != null && StringUtils.isNotBlank(user.getAccount())) {
+				//2,根据帐号到数据库中校验是否存在该帐号
+				List<User> list = userService.findUserByAccountAndId(user.getId(),user.getAccount());
+				String strResult = "true";
+				if (list != null && list.size() > 0) {
+					//说明该帐号已经存在
+					strResult = "false";
+				}
+				//输出
+				HttpServletResponse response = ServletActionContext.getResponse();
+				response.setContentType("text/html");
+				ServletOutputStream outputStream = response.getOutputStream();
+				outputStream.write(strResult.getBytes());
+				outputStream.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	public List<User> getUserList() {

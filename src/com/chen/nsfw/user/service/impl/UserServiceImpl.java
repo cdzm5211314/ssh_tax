@@ -120,5 +120,9 @@ public class UserServiceImpl implements UserService {
 			e.printStackTrace();
 		}
 	}
+
+	public List<User> findUserByAccountAndId(String id, String account) {
+		return userDao.findUserByAccountAndId(id,account);
+	}
 		
 }
