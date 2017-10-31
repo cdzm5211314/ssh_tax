@@ -37,7 +37,8 @@
 	}
 	//导入excel
 	function doImportExcel(){
-		
+		document.forms[0].action = "${basePath}nsfw/user_importExcel.action";
+		document.forms[0].submit();//提交表单
 	}
 	
 </script>
@@ -61,11 +62,10 @@
 							onclick="doSearch()" /></li>
 						<li style="float:right;"><input type="button" value="新增"
 							class="s_button" onclick="doAdd()" />&nbsp; <input type="button"
-							value="删除" class="s_button" onclick="doDeleteAll()" />&nbsp; <input
-							type="button" value="导出" class="s_button"
-							onclick="doExportExcel()" />&nbsp; <input name="userExcel"
-							type="file" /> <input type="button" value="导入" class="s_button"
-							onclick="doImportExcel()" />&nbsp;</li>
+							value="删除" class="s_button" onclick="doDeleteAll()" />&nbsp; 
+							<input type="button" value="导出" class="s_button" onclick="doExportExcel()" />&nbsp; 
+							<input name="userExcel" type="file" /> 
+							<input type="button" value="导入" class="s_button" onclick="doImportExcel()" />&nbsp;</li>
 					</div>
 
 					<div class="t_list" style="margin:0px; border:0px none;">

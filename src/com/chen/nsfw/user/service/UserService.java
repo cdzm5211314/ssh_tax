@@ -1,5 +1,6 @@
 package com.chen.nsfw.user.service;
 
+import java.io.File;
 import java.io.Serializable;
 import java.util.List;
 
@@ -25,5 +26,8 @@ public interface UserService {
 	
 	//导出用户列表 
 	public void exportExcel(List<User> userList, ServletOutputStream outputStream);
+	
+	//导入用户列表
+	public void importExcel(File userExcel, String userExcelFileName);
 
 }
