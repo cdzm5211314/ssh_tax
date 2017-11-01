@@ -1,8 +1,6 @@
 package com.chen.nsfw.user.action;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,11 +12,11 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.struts2.ServletActionContext;
 
+import com.chen.core.action.BaseAction;
 import com.chen.nsfw.user.entity.User;
 import com.chen.nsfw.user.service.UserService;
-import com.opensymphony.xwork2.ActionSupport;
 
-public class UserAction extends ActionSupport {
+public class UserAction extends BaseAction {
 
 	// 注入service
 	@Resource
@@ -26,7 +24,7 @@ public class UserAction extends ActionSupport {
 
 	private List<User> userList;
 	private User user;
-	private String[] selectedRow;
+	
 
 	// 获取头像(提供get/set方法)
 	private File headImg;
@@ -192,14 +190,6 @@ public class UserAction extends ActionSupport {
 
 	public void setUser(User user) {
 		this.user = user;
-	}
-
-	public String[] getSelectedRow() {
-		return selectedRow;
-	}
-
-	public void setSelectedRow(String[] selectedRow) {
-		this.selectedRow = selectedRow;
 	}
 
 	public File getHeadImg() {
