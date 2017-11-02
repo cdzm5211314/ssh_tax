@@ -5,19 +5,19 @@ import java.util.Date;
 
 public class User implements Serializable {
 
-	private String id;
-	private String dept;
-	private String account;
-	private String name;
-	private String password;
+	private String id;		//用户ID
+	private String dept;	//用户所属部门
+	private String account;	//用户帐号
+	private String name;	//用户名称
+	private String password;//用户密码
 
-	private String headImg;
-	private boolean gender;
-	private String state;
-	private String mobile;
-	private String email;
-	private Date birthday;
-	private String memo;
+	private String headImg; //用户头像
+	private boolean gender; //用户性别
+	private String state;	//用户状态
+	private String mobile;	//用户电话
+	private String email;	//用户邮箱
+	private Date birthday;	//用户生日
+	private String memo;	//用户备忘录
 	
 	// 用户状态
 	public static String USER_STATE_VALID = "1";// 有效

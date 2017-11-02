@@ -15,6 +15,8 @@
 	
 	<!-- 包含用户管理的struts配置文件 -->
 	<include file="com/chen/nsfw/user/config/user-struts.xml"></include>
+	<!-- 包含角色管理的struts配置文件 -->
+	<include file="com/chen/nsfw/role/config/role-struts.xml"></include>
 	
 	<!-- 配置全局返回结果及异常映射 -->
 	<package name="base-default" extends="struts-default">
